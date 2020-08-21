@@ -6,6 +6,41 @@
 </head>
 <body>
   <script>
+  <!DOCTYPE html>
+<html lang='ja'>
+<head>
+  <title>Practice</title>
+<meta charset = "utf-8">
+</head>
+<body>
+  <script>
+
+  var menus = ['掃除','買い物','散歩'];
+
+  task = () =>{
+    console.log('=====================');
+    console.log('現在持っているタスク');
+    console.log('=====================');
+  for (var i = 0; i < menus.length; i++) {
+    console.log(i + ':' +menus[i]);
+    }
+  }
+
+  task();
+
+  var menu = prompt('タスクを入力してください');
+  menus.push(menu);
+  alert('新しいタスクを追加しました');
+
+  task();
+
+
+  prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
+
+  </script>
+  </body>
+</html>
+
 
   </script>
   </body>
