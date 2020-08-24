@@ -7,25 +7,36 @@
 <body>
   <script>
 
-  const menus = ['掃除','買い物','散歩'];
+    const Tasks = [
+      {content:'机を片付ける、',genre:'掃除'},
+      {content:'牛乳を買う、',genre:'買い物'},
+      {content:'散歩する、',genre:'運動'},
+    ];
 
-  const task = () => {
-    console.log('=====================');
-    console.log('現在持っているタスク');
-    console.log('=====================');
-  for (var i = 0; i < menus.length; i++) {
-      console.log(i + ':' +menus[i]);
+    const template = () => {
+      console.log('=====================');
+      console.log('現在持っているタスク');
+      console.log('=====================');
+    for (let i = 0; i < Tasks.length; i++) {
+        const task = Tasks[i];
+        console.log(i + ":" +`[内容]${task.content}[ジャンル]${task.genre}`);
       }
-  }
-  task();
+      const newtask = {content:'',genre:''};
+      Tasks.push(newtask);
+    }
 
-  let menu = prompt('タスクを入力してください');
-  menus.push(menu);
 
-  task();
-  alert('新しいタスクを追加しました');
+    template();
 
-  prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
+    const menu = prompt('タスクを入力してください');
+    Tasks[3].content = menu;
+    const type = prompt('ジャンルを入力してください');
+    Tasks[3].genre = type;
+    alert('新しいタスクを追加しました');
+
+    template();
+
+    prompt('「確認、追加、削除、終了」の4ついずれかを入力してください');
 
   </script>
   </body>
