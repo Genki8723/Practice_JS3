@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Todoリスト</title>
 </head>
 <body>
@@ -17,16 +16,23 @@
 ​
     <table>
       <thead>
+        <tr>
         <th>ID</th>
         <th>コメント</th>
         <th>状態</th>
-        <th>削除ボタン</th>
+        <th>削除</th>
+        </tr>
       </thead>
-      <tbody class ="addTask-target"></tbody>
+      <tbody  id = "tb"></tbody>
     </table>
 ​
     <h2>新規タスクの追加</h2>
-    <input class="addTask-value" type="text" />
-    <button class="addTask-trigger" type="button">追加</button>
+    <form>
+      <input  type="text" id="taskname" value="">
+      <input type="button" value="追加" id = "addbtn">
+    </form>
+    
+    <script>
+</script>
 </body>
 </html>
